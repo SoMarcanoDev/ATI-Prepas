@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>
+{% if title %}
+{{title}}
+{% else %}
+Mi Primera Aplicación de Django
+{% endif %}
+</title>
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+</ul>
+</nav>
+{% block content %}
+{% endblock %}
+<footer>
+{% block footer %}
+{% endblock %}
+@ Mi empresa
+</footer>
+</body>
+</html>

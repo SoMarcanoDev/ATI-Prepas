@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ blog.titulo }}</title>
+</head>
+<body>
+    <h1>{{ blog.titulo }}</h1>
+    <p><strong>Autor:</strong> {{ blog.autor.nombre }} ({{ blog.autor.email }})</p>
+    <p><strong>Publicado el:</strong> {{ blog.fecha_publicacion }}</p>
+    <hr>
+    <p>{{ blog.contenido }}</p>
+    <br>
+    <a href="{% url 'lista_blogs' %}">← Volver al inicio</a>
+</body>
+</html>

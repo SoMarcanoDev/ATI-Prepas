@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Demo Blog</title>
+</head>
+<body>
+    <h1>Bienvenido al Blog de Pruebas</h1>
+    <hr>
+    {% for blog in blogs %}
+        <h2><a href="{% url 'detalle_blog' blog.id %}">{{ blog.titulo }}</a></h2>
+        <p>Por: {{ blog.autor.nombre }} | {{ blog.fecha_publicacion }}</p>
+        <p>{{ blog.contenido|truncatewords:20 }}</p>
+        <hr>
+    {% empty %}
+        <p>No hay publicaciones aún.</p>
+    {% endfor %}
+</body>
+</html>

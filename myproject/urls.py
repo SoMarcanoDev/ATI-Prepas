@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from seguridad.views import hello_world, hola_mundo
 
 urlpatterns = [
+    path('', include('blogsite.urls')),
     path('admin/', admin.site.urls),
     path('seguridad/', include('seguridad.urls')),
+    path('hello/', hello_world, name='hello'),
+    path('hola/', hola_mundo, name='hola_mundo'),
 ]
