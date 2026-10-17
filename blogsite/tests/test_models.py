@@ -5,12 +5,7 @@ class MiPrueba(TestCase):
     def test_suma(self):
         resultado = 2 + 2
         self.assertEqual(resultado, 4)
-
-# FALLO
-class PruebaConFalla(TestCase):
-    def test_suma(self):
-        resultado = 2 + 2
-        self.assertEqual(resultado, 3)
+ 
 
 # Modelos Blog
 class ModelosBlogsiteTests(TestCase):
